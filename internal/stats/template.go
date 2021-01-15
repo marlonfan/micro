@@ -6,7 +6,7 @@ var (
 <html>
 	<head>
 		<title>Micro Stats</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
                 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
                 <style>
                   html, body {
@@ -90,7 +90,7 @@ var (
             </div>
           </div>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap//3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
 	  {{template "script" . }}
 	</body>
@@ -117,11 +117,11 @@ var (
 	var chart = new CanvasJS.Chart("chart",{
 		zoomEnabled: true,
 		title: {
-			text: "Request Load"		
+			text: "Request Load"
 		},
 		toolTip: {
 			shared: true
-			
+
 		},
 		legend: {
 			verticalAlign: "top",
@@ -136,8 +136,8 @@ var (
 		},
 		axisY:{
 			includeZero: false
-		}, 
-		data: [{ 
+		},
+		data: [{
 			// dataSeries1
 			type: "line",
 			xValueType: "dateTime",
@@ -145,7 +145,7 @@ var (
 			name: "20x",
 			dataPoints: dataPoints1
 		},
-		{				
+		{
 			// dataSeries2
 			type: "line",
 			xValueType: "dateTime",
@@ -153,7 +153,7 @@ var (
 			name: "40x" ,
 			dataPoints: dataPoints2
 		},
-		{				
+		{
 			// dataSeries3
 			type: "line",
 			xValueType: "dateTime",
@@ -216,9 +216,9 @@ var (
 		});
 	}
 
-	// updating legend text with  updated with y Value 
+	// updating legend text with  updated with y Value
 	chart.options.data[0].legendText = " 20x  " + two;
-	chart.options.data[1].legendText = " 40x  " + four; 
+	chart.options.data[1].legendText = " 40x  " + four;
 	chart.options.data[2].legendText = " 50x  " + five;
 	chart.render();
   };
@@ -289,7 +289,7 @@ var (
 
     var request = {};
     req.open("GET", window.location.href, true);
-    req.setRequestHeader("Content-type","application/json");				
+    req.setRequestHeader("Content-type","application/json");
     req.send(JSON.stringify(request));
 
     setTimeout(function() {

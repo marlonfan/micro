@@ -7,7 +7,7 @@ var (
 	<head>
 		<title>Micro Web</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap//3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 		<style>
 		  html, body {
@@ -59,7 +59,7 @@ var (
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
-                  <span class="icon-bar"></span> 
+                  <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand logo" href="/"><img src="https://micro.mu/logo.png" height=50px width=auto style="margin-bottom: 5px;" /> Micro</a>
               </div>
@@ -83,7 +83,7 @@ var (
             </div>
           </div>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap//3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	  {{template "script" . }}
 	  <script type="text/javascript">
 		function toggle(e) {
@@ -143,7 +143,7 @@ var (
   width: 60px;
   height: 60px;
   display: block;
-  border-radius: 50px; 
+  border-radius: 50px;
   border: 2px solid whitesmoke;
   background-color: #fcfcfc;
   color: #AFACBE;
@@ -231,7 +231,7 @@ jQuery(function($, undefined) {
 			<div class="form-group">
 				<label for="service">Service</label>
 				<ul class="list-group">
-					<select class="form-control" type=text name=service id=service> 
+					<select class="form-control" type=text name=service id=service>
 					<option disabled selected> -- select a service -- </option>
 					{{range $key, $value := .Results}}
 					<option class = "list-group-item" value="{{$key}}">{{$key}}</option>
@@ -282,7 +282,7 @@ jQuery(function($, undefined) {
 			var copyText = document.getElementById("response");
 			const textArea = document.createElement('textarea');
 			textArea.textContent = copyText.innerText;
-			textArea.style = "position: absolute; left: -1000px; top: -1000px";	
+			textArea.style = "position: absolute; left: -1000px; top: -1000px";
 			document.body.append(textArea);
 			textArea.select();
 			textArea.setSelectionRange(0, 99999);
@@ -293,7 +293,7 @@ jQuery(function($, undefined) {
 	</script>
 	<script>
 		$(document).ready(function(){
-			//Function executes on change of first select option field 
+			//Function executes on change of first select option field
 			$("#service").change(function(){
 				var select = $("#service option:selected").val();
 				$("#endpoint").empty();
@@ -310,13 +310,13 @@ jQuery(function($, undefined) {
 					var serviceEndpoints = s_map[select]
 					var len = serviceEndpoints.length;
 					for(var i = 0; i < len; i++) {
-						$("#endpoint").append("<option value=\""+serviceEndpoints[i]+"\">"+serviceEndpoints[i]+"</option>");	
+						$("#endpoint").append("<option value=\""+serviceEndpoints[i]+"\">"+serviceEndpoints[i]+"</option>");
 					}
 				}
 				$("#endpoint").append("<option value=\"other\"> - Other</option>");
 			});
 
-			//Function executes on change of second select option field 
+			//Function executes on change of second select option field
 			$("#endpoint").change(function(){
 				var select = $("#endpoint option:selected").val();
 				if (select == "other") {
@@ -388,7 +388,7 @@ jQuery(function($, undefined) {
 			req.send(JSON.stringify(request));
 
 			return false;
-		};	
+		};
 	</script>
 {{end}}
 `
